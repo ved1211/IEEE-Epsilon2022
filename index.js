@@ -52,3 +52,4 @@ menuBtn.addEventListener("click", () => {
 })(jQuery);
 
 $("#timeline-1").timeline();
+
