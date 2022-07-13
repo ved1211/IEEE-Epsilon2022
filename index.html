@@ -12,7 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet" />
     
+   <!-- Bootstrap CSS -->
+   <link
+   rel="stylesheet"
+   href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+   crossorigin="anonymous"
+ />
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/topics.css" />
+
 
     <title>Epsilon 2022</title>
 </head>
@@ -106,6 +115,69 @@
       </div>
     </header>
 
+      <!--Topics-->  
+
+    <div class="container">
+      <p class="h1 topics-heading">MAIN TOPIC FOR EPSILON</p>
+    </div>
+    <div class="h-100 d-flex justify-content-centerk"></div>
+    <div class="container topics-container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="topics-content">
+            <img
+              width="150px"
+              height="150px"
+              src="./assets/Blue Black Retro Records Music Store Logo.png"
+              alt="#"
+            />
+            <h4>Subtopic For IEEE</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+              consectetur corporis numquam ipsam, tempora sapiente. Laborum,
+              aliquid. Quis sunt quam alias sapiente animi accusantium impedit,
+              iusto aspernatur totam, ad consequatur.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="topics-content">
+            <div class="topics-img">
+              <img
+                width="150px"
+                height="150px"
+                src="./assets/Blue Black Retro Records Music Store Logo.png"
+                alt="#"
+              />
+            </div>
+            <h4>Subtopic For CS</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+              consectetur corporis numquam ipsam, tempora sapiente. Laborum,
+              aliquid. Quis sunt quam alias sapiente animi accusantium impedit,
+              iusto aspernatur totam, ad consequatur.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="topics-content">
+            <img
+              width="150px"
+              height="150px"
+              src="./assets/Blue Black Retro Records Music Store Logo.png"
+              alt="#"
+            />
+            <h4>Subtopic For MTTS</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+              consectetur corporis numquam ipsam, tempora sapiente. Laborum,
+              aliquid. Quis sunt quam alias sapiente animi accusantium impedit,
+              iusto aspernatur totam, ad consequatur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Timeline Section  -->
     <section class="timeline-section">
@@ -301,6 +373,70 @@
     <script src="./particles.js"></script>
     <script src="./app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ 
+ <script>
+    
+    (function($) {
+  $.fn.timeline = function() {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".timeline-item"),
+      activeClass: "timeline-item--active",
+      img: ".timeline__img"
+    };
+    selectors.item.eq(0).addClass(selectors.activeClass);
+    selectors.id.css(
+      "background-image",
+      "url(" +
+        selectors.item
+          .first()
+          .find(selectors.img)
+          .attr("src") +
+        ")"
+    );
+    var itemLength = selectors.item.length;
+    $(window).scroll(function() {
+      var max, min;
+      var pos = $(this).scrollTop();
+      selectors.item.each(function(i) {
+        min = $(this).offset().top;
+        max = $(this).height() + $(this).offset().top;
+        var that = $(this);
+        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+          selectors.item.removeClass(selectors.activeClass);
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              selectors.item
+                .last()
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.last().addClass(selectors.activeClass);
+        } else if (pos <= max - 40 && pos >= min) {
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              $(this)
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
+      });
+    });
+  };
+})(jQuery);
+
+$("#timeline-1").timeline();
+
+    </script>
 </body>
+
 
 </html>
