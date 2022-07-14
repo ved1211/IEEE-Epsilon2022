@@ -20,6 +20,7 @@
    crossorigin="anonymous"
  />
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/timer.css">
     <link rel="stylesheet" href="./assets/topics.css" />
 
 
@@ -96,16 +97,59 @@
 
             <div>
                 <div>
-                    <i class="fas fa-route fa-2x"></i>
-                </div>
-
-                <div>
-                    <h2>Timeline</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto accusamus illum temporibus? At tempore obcaecati nostrum! Ipsum, accusamus itaque?</p>
-
-                    <a href="#">View
-                        <i class="fas fa-long-arrow-alt-right"></i>
-                    </a>
+                  
+                    <!-- --counter- -->
+                    <section class="home" id="home" >
+                      <div class="col-4 btn">
+                        <a href="#">Register</a>
+                      </div>
+                      <div class="home__container bd-container bd-grid">
+                          <div class="home__data">
+                              <p id="timer" class="timerSec">
+                                  <div class="d-flex justify-content-center mt-4 mb-5 timer">
+                                    <!-- <div class="row"> -->
+                                  <div class="col days">
+                                      <h2 class="value" style="color: #ffffff; padding: 0 0.2em;" id="days">
+                                        00
+                                      </h2>
+                                      <h4>
+                                        DAYS
+                                      </h4>
+                                    <!-- </div>
+                                    <div class="col hours"> -->
+                                      <h2 class="value" style="color:#ffffff;" id="hours">
+                                        00
+                                      </h2>
+                                      <h4>
+                                        HOURS
+                                      </h4>
+                                    </div>
+                                    <div class="col minutes">
+                                      <h2 class="value" style="color: #ffffff;" id="minutes">
+                                        00
+                                      </h2>
+                                      <h4>
+                                        MINUTES
+                                      </h4>
+                                    <!-- </div>
+                                    <div class="col seconds"> -->
+                                      <h2 class="value" style="color: #ffffff;" id="seconds">
+                                        00
+                                      </h2>
+                                      <h4>
+                                        SECONDS
+                                      </h4>
+                                    </div>
+                                  </div>
+                                </div>
+                              </p>
+                              </h2>
+                          </div>
+                      <div class="home__data">
+                          <img src="./EPSILON 2021/image/home.png" alt="" class="home__img">
+                      </div>
+                      </div>
+                  </section>
                 </div>
             </div>
         </div>
@@ -320,6 +364,7 @@
 $("#timeline-1").timeline();
 
     </script>
+    <script type="text/javascript" src="./js/timer.js"></script>
 </body>
 
 
