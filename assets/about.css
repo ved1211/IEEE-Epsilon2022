@@ -1,0 +1,25 @@
+.about{
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.h1{
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #b3a9a9;
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.Synopsis-highlightLine {
+    width: 52px;
+    height: 4px;
+    background: #632C65;
+    margin: 30px 0;
+  }
+  
+  .Synopsis-highlight {
+    font-weight: 700 !important;
+    width: 100%;
+    color: #632C65;
+  }
