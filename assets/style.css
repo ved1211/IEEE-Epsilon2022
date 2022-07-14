@@ -277,11 +277,11 @@ header h1{
     }
 }
 
-@media screen and  (max-width: 500px){
+/* @media screen and  (max-width: 500px){
     .glass > div div:nth-child(1){
         display: none;
     }
-} 
+}  */
 
 /* Timeline Styles  */
 
